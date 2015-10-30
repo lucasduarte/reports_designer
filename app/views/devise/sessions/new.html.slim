@@ -1,0 +1,20 @@
+= form_for(resource, as: resource_name, url: session_path(resource_name), :html => { class: 'login-form' }) do |f|
+  div class="login-wrap"
+    p class="login-img"
+      i class="icon_lock_alt"
+    div class="input-group"
+      span class="input-group-addon"
+        i class="icon_profile"
+      = f.text_field :email, autofocus: true, :class => 'form-control', :placeholder => 'Usuário'
+
+    div class="input-group"
+      span class="input-group-addon"
+        i class="icon_key_alt"
+      = f.password_field :password, autocomplete: "off", :class => 'form-control', :placeholder => 'Senha'
+
+    - if devise_mapping.rememberable?
+      label class="checkbox"
+        = f.check_box :remember_me
+        | Lembrar
+
+    = f.submit "Login", :class => 'btn btn-primary btn-lg btn-block'

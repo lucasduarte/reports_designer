@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+ $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
+ @import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+ @import "bootstrap-sass/assets/stylesheets/bootstrap";
+ @import "datatables/media/css/dataTables.bootstrap";
+ @import "style";
+ @import "style_responsive";
+ @import "flat_style";
+ @import "elegant-icons-style";
+ @import "font-awesome";
+
+
+.breadcrumb {
+  background-color: #ffffff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border: 0px solid transparent;
+}
+
+.radio, .checkbox {
+  display: block;
+  min-height: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  vertical-align: middle;
+}

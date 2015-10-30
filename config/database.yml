@@ -16,9 +16,11 @@
 #
 default: &default
   adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  encoding: utf8
+  database: reports_designer_development
+  username: postgres
+  password: root
+  host: localhost
   pool: 5
 
 development:

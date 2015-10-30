@@ -8,6 +8,11 @@ Bundler.require(*Rails.groups)
 
 module ReportsDesigner
   class Application < Rails::Application
+    # Use the responders controller from the responders gem
+    config.app_generators.scaffold_controller :responders_controller
+    
+    config.autoload_paths << Rails.root.join('datatables')
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -21,6 +26,8 @@ module ReportsDesigner
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
+    config.assets.precompile << %r(bootstrap-sass/assets/fonts/bootstrap/[\w-]+\.(?:eot|svg|ttf|woff2?)$)
+    config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
     config.active_record.raise_in_transactional_callbacks = true
   end
 end

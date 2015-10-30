@@ -24,6 +24,17 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'slim'
+
+gem "bower-rails", "~> 0.10.0"
+
+gem "font-awesome-rails"
+
+gem 'devise'
+
+gem "responders"
+
+#Pagination gem
+gem 'kaminari'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
